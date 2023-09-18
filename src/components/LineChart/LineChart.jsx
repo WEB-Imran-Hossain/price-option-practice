@@ -1,4 +1,4 @@
-import { LineChart as LChart, Line } from 'recharts';
+import { LineChart as LChart, Line, XAxis, YAxis } from 'recharts';
 
 const LineChart = () => {
 
@@ -81,6 +81,8 @@ const LineChart = () => {
     return (
         <div>
             <LChart width={500} height={400} data={mathMarksData}>
+                <XAxis dataKey="name" />
+                <YAxis />
                 <Line dataKey={'math_mark'} stroke='red'></Line>
                 <Line dataKey={'physics_mark'} stroke='green'></Line>
                 <Line dataKey={'chemistry_mark'} stroke='orange'></Line>
